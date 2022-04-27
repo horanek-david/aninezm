@@ -1,0 +1,29 @@
+
+
+<div class="login-container" *ngFor="let data of regData">
+
+    <div class="img-container">
+
+    </div>
+    
+    <div class="login-part">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="login-text"><a>Bejelentkezés</a></div>
+            <a class="username-text" for="usernametxt">Felhasználónév:</a><br>
+            <div class="usr-design">
+                <input type="text" class="username" name="usernametxt" formControlName="username">
+            </div>
+            
+            <a class="password-text" for="passwordtxt">Jelszó</a><br>
+            <div class="pwd-design">
+                <input type="password" class="password" name="passwordtxt" formControlName="password">
+            </div>
+            
+            <a class="password-forgotten">Elfelejtette a jelszavát?</a><br>
+            <button type="submit" class="login-btn">Belépés</button><br>
+            <a class="register-text" [routerLink]="[data.routeLink]">Regisztráció</a>
+        </form>
+    </div>
+    
+
+</div>

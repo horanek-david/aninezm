@@ -1,0 +1,14 @@
+
+<ng-container *ngIf="logged;  then iAmDone; else iAmNotDone">
+</ng-container>
+
+<ng-template #iAmDone>
+    <app-navbar></app-navbar>
+</ng-template>
+
+<ng-template #iAmNotDone>
+   <app-navbarlogin></app-navbarlogin>
+</ng-template>
+
+<!--<app-navbar></app-navbar>-->
+<app-body></app-body>

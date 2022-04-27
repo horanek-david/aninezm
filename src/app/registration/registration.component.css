@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    font-family: "Poppins", sans-serif;     /* Saját kód. */
+}
+
+.login-container {
+    width: 80%;
+    height: 95%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    color: rgb(20, 20, 20);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+    min-height: 432px;
+    min-width: 1000px;
+}
+
+.img-container {
+    width: 60%;
+    background-image: url('../../assets/anime-reg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.login-part {
+    background-color: whitesmoke;
+    width: 40%;
+    padding-top: 20px;
+    padding-left: 20px;
+    display: grid;
+
+}
+
+.register-text {
+    margin-left: 130px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+    font-size: 20px;
+}
+
+.username-text {
+    margin-left: 65px;
+}
+
+.username-design {
+    margin-left: 65px;
+    margin-bottom: 20px;
+
+    border: 0;
+    border-bottom: 1px solid rgb(20, 20, 20);
+    background: transparent;
+    font-size: 16px;
+}
+
+.password-text {
+    margin-left: 65px;
+
+    font-size: 15px;
+}
+
+.password-design {
+    margin-left: 65px;
+    margin-bottom: 20px;
+
+    border: 0;
+    border-bottom: 1px solid rgb(20, 20, 20);
+    background: transparent;
+    font-size: 16px;
+
+}
+
+.email-text {
+    margin-left: 65px;
+
+    font-size: 15px;
+}
+
+.email-design {
+    margin-left: 65px;
+    margin-bottom: 20px;
+
+    border: 0;
+    border-bottom: 1px solid rgb(20, 20, 20);
+    background: transparent;
+    font-size: 16px;
+
+}
+
+.username-design, .password-design, .email-design:focus {
+    outline: none;
+}
+
+.rgr-btn {
+    margin-left: 85px;
+    margin-top: 20px;
+
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    padding-right: 55px;
+    border: 0;
+    border-radius: 24px;
+    box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+
+}
+
+.rgr-btn:hover {
+    box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.rgr-btn:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+}
+
+.login-text {
+    margin-left: 160px;
+
+    font-size: 13px;
+    color: black;
+
+    text-decoration: none;
+}
+

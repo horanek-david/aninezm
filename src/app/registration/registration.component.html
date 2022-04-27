@@ -1,0 +1,32 @@
+
+    <div class="login-container" *ngFor="let data of loginData">
+
+        <div class="img-container">
+
+        </div>
+
+        <div class="login-part">
+            <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+                <div class="register-text"><a>Regisztrálás</a></div>
+                <a class="username-text" for="usernametxt">Felhasználónév:</a><br>
+                <div class="usr-design">
+                    <input type="text" class="username-design" id="uname" name="usernametxt" formControlName="username">
+                </div>
+                
+                <a class="password-text" for="passwordtxt">Jelszó</a><br>
+                <div class="pwd-design">
+                    <input type="password" class="password-design" id="password" name="passwordtxt" formControlName="password">
+                </div>
+
+                <a class="email-text" for="emailtxt">Email</a><br>
+                <div>
+                    <input type="email" class="email-design" id="email" name="emailtxt" formControlName="email">
+                </div>
+                
+                <button type="submit" class="rgr-btn">Regisztráció</button><br>
+                <a class="login-text" [routerLink]="[data.routeLink]">Belépés</a>
+            </form>
+        </div>
+
+    </div>
+

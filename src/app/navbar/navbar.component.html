@@ -1,0 +1,59 @@
+<div class="navigationbar">
+    
+    <div class="navbar-name-list">
+
+        <div class="navbar-item-webname" *ngFor="let data of baseData">
+            <div class="logo-text" [routerLink]="[data.routeLink]">ANINEZM</div>
+        </div>
+
+        <ul class="navbar-list">
+            <li class="navbar-item-links" *ngFor="let data of navData">
+                <a href="#" class="navbar-link" [routerLink]="[data.routeLink]"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                >
+                    <span class="navbar-link-text">
+                        {{data.label}}
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    
+    <div class="navbar-profile">
+        <div class="navbar-item-img" *ngFor="let data of profileData">
+            <div class="navbar-item-img" [routerLink]="[data.routeLink]">
+                <img class="profile-picture" [src]="data.url">
+            </div> 
+        </div>  
+
+        <div class="navbar-item-uname" *ngFor="let data of profileData">
+            <div class="profile-details" [routerLink]="[data.routeLink]">
+                <div class="name">
+                    {{data.label}}
+                </div>
+            </div>      
+        </div>
+
+        <div class="navbar-item-logout">
+            <button class='btn-log-out' (click)="logoutButton()">
+                <img class='log-out' src="../../assets/log-out-regular-24.png" >
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+<!--<div class="profile-container" *ngFor="let data of profileData">
+        
+    <div class="profile-details" [routerLink]="[data.routeLink]">
+        <img class="profile-picture" [src]="data.url">
+        <div class="name_rank">
+            <div class="name">
+                {{data.label}}
+            </div>
+        </div>
+    </div>        
+</div>-->

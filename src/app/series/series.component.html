@@ -1,0 +1,76 @@
+<div id="input-form" *ngIf="isVisible">
+    <form [formGroup]="seriesForm" (ngSubmit)="onAddPost()">
+        <div class="input-header">
+            <span>Sorozat felvitele</span>
+        </div>
+        <div class="form-part">
+            <div class="form-name">
+                <span>Cím:</span><input id="name-input" name="nametxt" formControlName="name">
+            </div>
+            <div class="form-genre">
+                <span>Műfaj:</span><input id="genre-input" name="genretxt" formControlName="genre">
+            </div>
+            <div class="form-published">
+                <span>Kiadás:</span><input id="published-input" name="publishedtxt" formControlName="published">
+            </div>
+        </div>
+        
+        <div class="form-btns">
+            <div>
+                <button type="submit" class="up-btn">Hozzáad</button>
+            </div>
+            <div>
+                <button type="button" class="cancel-btn" (click)="onClose()">Mégse</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="serie-container">
+    <div class="img-container">
+        <div class="img"></div>
+    </div>
+
+    <div class="series-container">
+        <div class="buttons-container">
+            <form [formGroup]="searchForm">
+                <div class="search-input">
+                    <input type="search" class="search" placeholder="Sorozat keresése..." formControlName="searchname">
+                </div>
+            </form>
+            
+            <div class="new-input">
+                <button type="button" class="new-btn" (click)="onOpen()">+ SOROZAT</button>
+            </div>
+        </div>
+
+        <div class="serie-list-container">
+            <ul>
+                <li class="serie-list" *ngFor="let serie of series">
+                    <div id="list-container">
+                        <div id="list-img">
+                            <img id="cover-img" src="../../assets/Aot-cover.webp">
+                        </div>
+                        <div>
+                            <div id="list-name">
+                                <span id="name">{{serie.name}}</span>
+                            </div>
+                            <div id="list-description">
+                                <span id="genre">{{serie.genre}}</span>
+                                <span id="list-"> -</span>
+                                <span id="published">{{serie.published}}</span>
+                            </div>
+                        </div>
+                        <div id="list-btns">
+                            <button id="seen-btn"(click)="isWatch(serie._id)" *ngIf="!serie.seen"></button>
+                            <button id="seen-btn2"(click)="isWatch(serie._id)" *ngIf="serie.seen"></button>
+                            <button id="delete-btn" (click)="onDeleteSerie(serie._id)"></button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    
+</div>

@@ -1,0 +1,32 @@
+<div class="navigationbar">
+    
+    <div class="navbar-name-list">
+
+        <div class="navbar-item-webname" *ngFor="let data of baseData">
+            <div class="logo-text" [routerLink]="[data.routeLink]">aninezm</div>
+        </div>
+
+        <ul class="navbar-list">
+            <li class="navbar-item-links" *ngFor="let data of navData">
+                <a href="#" class="navbar-link" [routerLink]="[data.routeLink]"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                >
+                    <span class="navbar-link-text">
+                        {{data.label}}
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+
+    
+    <div class="navbar-login" *ngFor="let data of loginData">
+        <div class="login-text" [routerLink]="[data.routeLink]">
+            <a>Bejelentkezés</a>
+        </div>
+    </div>
+
+</div>
+

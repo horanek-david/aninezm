@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    font-family: "Poppins", sans-serif;     /* Saját kód. */
+}
+
+.profiles-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.img-container {
+    /*box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;*/
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+    min-height: 160px;
+    min-width: 1250px;
+    padding: 5px;
+
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.img {
+    background-image: url('../../assets/anime-profile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 1240px;
+    min-height: 150px;
+
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+.profile-container {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+    min-height: 400px;
+    min-width: 1250px;
+    margin-top: 10px;
+
+    background-color: whitesmoke;
+    color: rgb(20, 20, 20);
+    border-radius: 5px;
+}
+
